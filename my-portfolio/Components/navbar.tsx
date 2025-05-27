@@ -1,21 +1,41 @@
 "use client"
-import React from "react";
-import Link from "next/link";
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="w-full px-4 py-4 bg-white shadow-md fixed top-0 z-50">
+    <nav className=" sticky top-0 z-50 bg-white px-4 py-3">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link href="/">
-          <span className="text-xl font-bold text-blue-600 cursor-pointer">CodeWithGhostMan</span>
-        </Link>
-        <ul className="flex space-x-6 text-gray-700 font-medium">
-          <li><a href="#home" className="hover:text-blue-600">Home</a></li>
-          <li><a href="#about" className="hover:text-blue-600">About</a></li>
-          <li><a href="#project" className="hover:text-blue-600">Project</a></li>
-          <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
+        <div className="text-xl font-bold"><span className='text-blue-600'> CodewithGhostMan </span></div>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-6">
+          <li><a href="#home" className="hover:text-gray-400">Home</a></li>
+          <li><a href="#about" className="hover:text-gray-400">About</a></li>
+          <li><a href="#project" className="hover:text-gray-400">Project</a></li>
+          <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
         </ul>
+
+        {/* Hamburger Icon */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-2xl"
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <ul className="md:hidden mt-3 space-y-4">
+          <li><a href="#" className="block hover:text-gray-400">Home</a></li>
+          <li><a href="#" className="block hover:text-gray-400">About</a></li>
+          <li><a href="#" className="block hover:text-gray-400">Services</a></li>
+          <li><a href="#" className="block hover:text-gray-400">Contact</a></li>
+        </ul>
+      )}
     </nav>
   );
 };
