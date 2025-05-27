@@ -1,2 +1,2 @@
 # Portfolio
-A Portfolio built with React.js
+A Portfolio built with Next.js
