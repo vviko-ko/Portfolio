@@ -11,7 +11,7 @@ const Navbar = () => {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="sticky top-0 z-50 bg-gray-900 text-white px-4 py-3 shadow-md"
+      className="sticky top-0 z-50 "
     >
     <nav className=" sticky top-0 z-50 bg-white px-4 py-3">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
