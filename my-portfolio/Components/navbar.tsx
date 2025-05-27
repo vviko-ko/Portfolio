@@ -1,11 +1,18 @@
 "use client"
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import {motion} from 'framer-motion'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    <motion.nav
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="sticky top-0 z-50 bg-gray-900 text-white px-4 py-3 shadow-md"
+    >
     <nav className=" sticky top-0 z-50 bg-white px-4 py-3">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-xl font-bold"><span className='text-blue-600'> CodewithGhostMan </span></div>
@@ -37,6 +44,7 @@ const Navbar = () => {
         </ul>
       )}
     </nav>
+    </motion.nav>
   );
 };
 
