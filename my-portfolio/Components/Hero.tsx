@@ -9,11 +9,11 @@ const Hero = () => {
         <div className="mb-6">
           {/* Replace with your image path */}
           <Image 
-            src={"/myguy.avif"} 
+            src={"/web.avif"} 
             alt="Hero Image" 
-            width={300} 
-            height={300} 
-            className="mx-auto rounded-full object-cover shadow-lg"
+            width={400} 
+            height={400} 
+            className="mx-auto rounded-full object-cover "
           />
         </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
