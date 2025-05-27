@@ -37,10 +37,10 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden mt-3 space-y-4">
-          <li><a href="#" className="block hover:text-gray-400">Home</a></li>
-          <li><a href="#" className="block hover:text-gray-400">About</a></li>
-          <li><a href="#" className="block hover:text-gray-400">Services</a></li>
-          <li><a href="#" className="block hover:text-gray-400">Contact</a></li>
+          <li><a href="#home" className="block hover:text-gray-400">Home</a></li>
+          <li><a href="#about" className="block hover:text-gray-400">About</a></li>
+          <li><a href="#project" className="block hover:text-gray-400">Project</a></li>
+          <li><a href="#contact" className="block hover:text-gray-400">Contact</a></li>
         </ul>
       )}
     </nav>
