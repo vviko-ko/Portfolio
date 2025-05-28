@@ -17,7 +17,7 @@ const AboutSection = () => {
         </motion.h2>
 
         <motion.p
-          className="text-lg text-center mb-10"
+          className=" text-center mb-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}

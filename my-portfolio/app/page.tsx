@@ -5,6 +5,7 @@ import Hero from '@/Components/Hero';
 import AboutSection from '@/Components/Aboutsection';
 import ContactSection from '@/Components/Contactsection';
 import Footer from '@/Components/Footer';
+import ProjectsSection from '@/Components/Project';
 
 const Page = () => {
   return (
@@ -12,6 +13,7 @@ const Page = () => {
     <Navbar/>
     <Hero/>
     <AboutSection/>
+    <ProjectsSection/>
     <ContactSection/>
     <Footer/>
     </div>
