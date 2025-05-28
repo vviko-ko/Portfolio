@@ -6,6 +6,7 @@ import AboutSection from '@/Components/Aboutsection';
 import ContactSection from '@/Components/Contactsection';
 import Footer from '@/Components/Footer';
 import ProjectsSection from '@/Components/Project';
+import DownloadCVSection from '@/Components/DownloadCVSection';
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
     <Navbar/>
     <Hero/>
     <AboutSection/>
+    <DownloadCVSection/>
     <ProjectsSection/>
     <ContactSection/>
     <Footer/>

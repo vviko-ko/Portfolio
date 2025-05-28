@@ -41,7 +41,7 @@ const ProjectsSection = () => {
       : projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <section id="project" className="w-full px-4 py-16 bg-white text-gray-800">
+    <section id="project" className="w-full px-4 py-16 bg-gray-100 text-gray-800">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           className="text-3xl font-bold mb-6 text-center"
