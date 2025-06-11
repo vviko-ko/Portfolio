@@ -8,21 +8,21 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "Built with Next.js, TailwindCSS, and Framer Motion.",
-    image: "/web.avif",
+    image: "/project1.png",
     link: "https://yourportfolio.com",
     category: "Next.js",
   },
   {
     title: "React Dashboard",
     description: "Admin dashboard with Chart.js and user authentication.",
-    image: "/web.avif",
+    image: "/project2.jpg",
     link: "https://dashboard.com",
     category: "React",
   },
   {
     title: "Landing Page",
     description: "Animated landing page using HTML, TailwindCSS, and JavaScript.",
-    image: "/web.avif",
+    image: "/project3.jpg",
     link: "https://landingpage.com",
     category: "HTML/CSS",
   },
@@ -127,19 +127,22 @@ const ProjectsSection = () => {
         </button>
 
         <Image
-          src={"web.avif"}
-          alt={"okay"}
+          src={activeProject.image}
+          alt={activeProject.title}
           width={600}
           height={400}
           className="rounded-lg mb-4 w-full h-auto object-cover"
         />
 
-        <h3 className="text-2xl font-bold mb-2 text-gray-900">{"Paige"}</h3>
-        <p className="text-gray-700 text-sm mb-4">{"Recruiting website"}</p>
+        <h3 className="text-2xl font-bold mb-2 text-gray-900">
+          {activeProject.title}
+        </h3>
+        <p className="text-gray-700 text-sm mb-4">
+          {activeProject.description}
+        </p>
 
-        {/* Optional tech stack tags (static or dynamic) */}
         <div className="flex flex-wrap gap-2 mb-4">
-          {["Next.js","Bootstrap", "React.Js", "TailwindCSS", "Framer Motion"].map((tech) => (
+          {["Next.js", "React", "TailwindCSS", "Framer Motion"].map((tech) => (
             <span
               key={tech}
               className="bg-blue-100 text-blue-800 px-3 py-1 text-xs rounded-full"
@@ -149,7 +152,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* {okay && (
+        {activeProject.link && (
           <a
             href={activeProject.link}
             target="_blank"
@@ -158,11 +161,12 @@ const ProjectsSection = () => {
           >
             Visit Project →
           </a>
-        )} */}
+        )}
       </motion.div>
     </motion.div>
   )}
 </AnimatePresence>
+
 
       </div>
     </section>
