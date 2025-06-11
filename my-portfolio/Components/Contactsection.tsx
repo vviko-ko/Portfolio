@@ -1,45 +1,51 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import { MessageCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const ContactSection = () => {
+const WhatsAppChatbox = () => {
+  const [open, setOpen] = useState(false);
+
+  const phoneNumber = "2347043331177"; // 
+  const preFilledMessage = encodeURIComponent("Hi Victor, I visited your portfolio and would like to chat!");
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${preFilledMessage}`;
+
   return (
-    <section id="contact" className="w-full px-4 py-16 bg-white text-gray-800">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
-        <p className="mb-8">
-          Feel free to contact me by submitting the form below and I will get back to you as soon as possible.
-        </p>
-        <form action="https://formspree.io/f/mvojyggj" method="POST" className="space-y-6">
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter Your Name"
-            required
-            className="w-full border border-gray-300 px-4 py-2 rounded"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter Your Email"
-            required
-            className="w-full border border-gray-300 px-4 py-2 rounded"
-          />
-          <textarea
-            name="message"
-            placeholder="Enter Your Message"
-            required
-            className="w-full border border-gray-300 px-4 py-2 rounded h-32"
-          />
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+    <div className="fixed bottom-6 right-6 z-50">
+      <button
+        onClick={() => setOpen((prev) => !prev)}
+        className="bg-blue-500  text-white p-4 rounded-full shadow-xl transition focus:outline-none"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle className="w-6 h-6" />
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.3 }}
+            className="absolute bottom-16 right-0 w-72 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl shadow-lg p-4"
           >
-            Submit
-          </button>
-        </form>
-      </div>
-    </section>
+            <h4 className="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Hey👋,Thank you for checking out my portfolio</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Click below to chat with me directly on WhatsApp.
+            </p>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500  text-white px-4 py-2 rounded-lg text-sm inline-block text-center w-full"
+            >
+              Chat on WhatsApp
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 };
 
-export default ContactSection;
+export default WhatsAppChatbox;
