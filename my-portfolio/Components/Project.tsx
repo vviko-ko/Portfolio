@@ -127,22 +127,19 @@ const ProjectsSection = () => {
         </button>
 
         <Image
-          src={activeProject.image}
-          alt={activeProject.title}
+          src={"web.avif"}
+          alt={"okay"}
           width={600}
           height={400}
           className="rounded-lg mb-4 w-full h-auto object-cover"
         />
 
-        <h3 className="text-2xl font-bold mb-2 text-gray-900">
-          {activeProject.title}
-        </h3>
-        <p className="text-gray-700 text-sm mb-4">
-          {activeProject.description}
-        </p>
+        <h3 className="text-2xl font-bold mb-2 text-gray-900">{"Paige"}</h3>
+        <p className="text-gray-700 text-sm mb-4">{"Recruiting website"}</p>
 
+        {/* Optional tech stack tags (static or dynamic) */}
         <div className="flex flex-wrap gap-2 mb-4">
-          {["Next.js", "React", "TailwindCSS", "Framer Motion"].map((tech) => (
+          {["Next.js","Bootstrap", "React.Js", "TailwindCSS", "Framer Motion"].map((tech) => (
             <span
               key={tech}
               className="bg-blue-100 text-blue-800 px-3 py-1 text-xs rounded-full"
@@ -152,7 +149,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {activeProject.link && (
+        {/* {okay && (
           <a
             href={activeProject.link}
             target="_blank"
@@ -161,12 +158,11 @@ const ProjectsSection = () => {
           >
             Visit Project →
           </a>
-        )}
+        )} */}
       </motion.div>
     </motion.div>
   )}
 </AnimatePresence>
-
 
       </div>
     </section>
