@@ -60,7 +60,7 @@ const DownloadCVSection = () => {
                 </button>
               </div>
               <iframe
-                src="/victor-cv.pdf"
+                src="/Updated CV.pdf"
                 className="w-full h-[80vh] rounded-lg border border-gray-200 dark:border-gray-700"
                 title="CV Preview"
               />
