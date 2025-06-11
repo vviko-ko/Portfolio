@@ -13,13 +13,13 @@ const Footer = () => {
       </p>
       {/* <div className="mb-4 text-white">&copy; CodeWithGhostMan</div> */}
       <div className="flex justify-center gap-6">
-             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+             <a href="https://www.facebook.com/share/1AShZEDyta/" target="_blank" rel="noopener noreferrer">
           <FaFacebook className="text-xl text-white hover:text-blue-500" />
         </a>
         <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="text-xl text-white hover:text-blue-400" />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/vviko_ko?igsh=NTV6cXAwY2p3aHgx" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="text-xl text-white hover:text-pink-500" />
         </a>
       </div>

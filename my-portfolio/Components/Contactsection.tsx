@@ -11,7 +11,7 @@ const WhatsAppChatbox = () => {
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${preFilledMessage}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50" id="contact">
       <button
         onClick={() => setOpen((prev) => !prev)}
         className="bg-blue-500  text-white p-4 rounded-full shadow-xl transition focus:outline-none"
