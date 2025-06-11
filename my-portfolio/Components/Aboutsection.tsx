@@ -13,7 +13,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          About Me
+        
         </motion.h2>
 
         <motion.p
@@ -43,7 +43,7 @@ const AboutSection = () => {
               I am open to job opportunities where I can contribute, learn, and grow.
               If you have a good opportunity, do not hesitate to contact me.
             </p>
-            <a href="#contact">
+            {/* <a href="#whatsapp-chatbox">
               <motion.button
                 className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
                 whileHover={{ scale: 1.05 }}
@@ -51,7 +51,7 @@ const AboutSection = () => {
               >
                 Hire Me
               </motion.button>
-            </a>
+            </a> */}
           </motion.div>
 
           {/* Right Section */}

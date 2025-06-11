@@ -37,8 +37,9 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          A Frontend focused Web Developer building the Frontend of Websites and Web Applications <br />
-          that leads to the success of the overall product
+          {/* A Frontend focused Web Developer building the Frontend of Websites and Web Applications <br />
+          that leads to the success of the overall product */}
+           I turn complex problems into elegant, responsive solutions that users love.
         </motion.p>
       </div>
     </section>
