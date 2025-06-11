@@ -23,8 +23,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Here you will find more information about me, what I do, and my current skills
-          mostly in terms of programming and technology.
+          
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-10 text-center">
