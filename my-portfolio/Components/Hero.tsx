@@ -16,8 +16,8 @@ const Hero = () => {
           <Image 
             src={"/web.avif"} 
             alt="Hero Image" 
-            width={400} 
-            height={400} 
+            width={350} 
+            height={350} 
             className="mx-auto rounded-full object-cover"
           />
         </motion.div>

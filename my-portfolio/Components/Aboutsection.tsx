@@ -72,7 +72,7 @@ const AboutSection = () => {
             >
               {[
                 "HTML", "CSS", "Bootstrap", "TailwindCSS",
-                "JavaScript", "React Js", "Next Js", "GitHub"
+                "JavaScript", "React Js", "Next Js", "GitHub","Python (Cisco Certified)"
               ].map((skill) => (
                 <motion.span
                   key={skill}
